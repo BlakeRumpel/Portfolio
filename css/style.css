@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    border-bottom: 3px solid #747aa0;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.name {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    color: #211f2c;
+    font-size: 14px;
+}
+
+.name > * {
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 100%;
+}
+
+.engines {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.engines-title {
+    color: #747aa0;
+}
+
+.engine {
+    margin: 10px;
+    text-align: center;
+}
+
+.engine-name {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 5px;
+    font-size: 30px;
+}
+
+.engine-info {
+    margin: auto;
+}
+
+.engine-image {
+    width: 250px;
+    height: 150px;
+}
+
+a {
+    color: #211f2c;
+    text-decoration: none;
+}
+
+footer {
+    position: relative;
+    border-top: 3px solid #747aa0;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.feet {
+    display: flex;
+    padding: 0 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social {
+    display: flex; 
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+ 
+.social-item {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 6px;
+    margin: 10px 5px;
+}
+
+.social-icon {
+    width: 100%;
+}
+
+@media screen and (min-width: 420px) {
+    header h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    .engines {
+        justify-content: space-between;
+    }
+}
