@@ -36,7 +36,7 @@
 	exit={{ borderRadius: "50px" }}
 >
 	<div
-		class="card fixed top-1/3 left-0 right-0 m-auto rounded-xl p-16 border-white border-4 max-w-5xl z-20"
+		class="fixed top-[25%] left-8 right-8 m-auto rounded-xl p-16 border-surface-900-50-token border-4 max-w-5xl z-20 bg-surface-100-800-token"
 		use:motion
 	>
 		<Motion

@@ -4,24 +4,24 @@
 	import "@skeletonlabs/skeleton/styles/all.css";
 	import "../app.postcss";
 	import Navbar from "$lib/components/Navbar.svelte";
-	import { beforeNavigate } from "$app/navigation";
-	import { page } from "$app/stores";
 	import { fly, slide } from "svelte/transition";
 
 	export let data: LayoutData;
-
-	let top = $page.route.id !== "/";
-
-	beforeNavigate((navigation) => {
-		top = !navigation.to || navigation.to.route.id !== "/";
-	});
 </script>
 
+<svelte:head>
+	<title>Blake Rumpel</title>
+	<meta name="description" content="The portfolio site of software engineer Blake Rumpel!" />
+</svelte:head>
+
+<Navbar />
+
 {#key data.url}
-	<div class="w-full h-full flex flex-col" in:fly out:slide>
-		<main class="h-full flex flex-col relative">
-			<slot />
-		</main>
-		<Navbar />
-	</div>
+	<main
+		class="h-full flex flex-col relative pt-16 p-4 overflow-x-hidden overflow-y-auto"
+		in:fly
+		out:slide
+	>
+		<slot />
+	</main>
 {/key}

@@ -1,51 +1,73 @@
 <script lang="ts">
 	import Circle from "$lib/components/Circle.svelte";
 	import Card from "$lib/components/Card.svelte";
-	import { faQuestion, faUser } from "@fortawesome/free-solid-svg-icons";
+	import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 	import { AnimateSharedLayout, AnimatePresence, Motion } from "svelte-motion";
 	import BlakesMods from "$lib/components/cards/BlakesMods.svelte";
 	import TicketTote from "$lib/components/cards/TicketTote.svelte";
 	import { onMount } from "svelte";
 	import anime from "animejs";
-
-	const list = [
-		{ id: 1 },
-		{ id: 2, component: BlakesMods, x: 200, y: -200 },
-		{ id: 3, component: TicketTote, x: -500, y: 200 },
-		{ id: 4, x: 250, y: 250 },
-		{ id: 5, x: -700, y: -175 }
-	];
+	import { debounce } from "lodash";
+	import { goto } from "$app/navigation";
+	import MITT from "$lib/components/cards/MITT.svelte";
+	import Tudu from "$lib/components/cards/Tudu.svelte";
 
 	let selected: number | undefined;
 
-	function animateCircles() {
-		setTimeout(() => {
-			anime({
-				targets: ".stagger",
-				opacity: 1,
-				translateX: (el, i) => [0, list[i + 1].x + 200],
-				translateY: (el, i) => [0, list[i + 1].y],
-				delay: anime.stagger(250)
-			});
-		}, 700);
-	}
+	const list = [
+		{ id: 1 },
+		{ id: 2, title: "Blake's Mods", component: BlakesMods, x: 200, y: -200 },
+		{ id: 3, title: "TicketTote", component: TicketTote, x: -600, y: 200 },
+		{ id: 4, title: "Secret Project", component: Tudu, x: 150, y: 250 },
+		{ id: 5, title: "MITT", component: MITT, x: -650, y: -175 }
+	];
+
+	let widthMultiplier = 1;
+
+	const animateCircles = debounce(() => {
+		anime({
+			targets: ".stagger",
+			opacity: 1,
+			translateX: (el, i) => (list[i + 1].x + 200) * widthMultiplier,
+			translateY: (el, i) => list[i + 1].y,
+			delay: anime.stagger(250)
+		});
+	}, 700);
 
 	function onCloseCard() {
 		animateCircles();
 	}
 
-	onMount(() => {
+	function onResize() {
+		const width = window.innerWidth;
+		const minWidth = 1300;
+
+		widthMultiplier = Math.min(width / minWidth, 1);
+
 		animateCircles();
+	}
+
+	onMount(() => {
+		onResize();
 	});
 </script>
 
-<div class="container flex relative h-full mx-auto justify-center items-center">
+<svelte:window on:resize={debounce(onResize, 100)} />
+
+<div
+	class="container flex flex-col md:flex-row relative h-full mx-auto mt-16 md:-mt-16 justify-center items-center"
+>
+	<div class="space-y-2">
+		<h1>Blake Rumpel</h1>
+		<h3>Software Engineer</h3>
+	</div>
+
 	<AnimateSharedLayout type="crossfade">
 		<Motion let:motion layout>
-			<div use:motion class="container flex relative h-full mx-auto justify-center items-center">
-				<Circle className="z-10" size="large" index={1} bind:selected>
-					<Fa icon={faUser} style="width: 100%; height: 100%" />
+			<div use:motion class="flex relative h-full mx-auto justify-center items-center">
+				<Circle className="z-10" size="large" index={1} on:click={() => goto("/about")}>
+					<img src="https://i.pravatar.cc" alt="person" />
 				</Circle>
 
 				<Circle className="stagger" index={2} bind:selected>
@@ -58,7 +80,7 @@
 					<Fa icon={faQuestion} style="width: 100%; height: 100%" />
 				</Circle>
 				<Circle className="stagger" index={5} bind:selected>
-					<Fa icon={faQuestion} style="width: 100%; height: 100%" />
+					<img src="/img/mitt.png" alt="manitoba institute of trades and technology logo" />
 				</Circle>
 			</div>
 		</Motion>

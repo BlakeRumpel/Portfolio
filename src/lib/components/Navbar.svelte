@@ -3,26 +3,38 @@
 	import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 	import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 	import { page } from "$app/stores";
+	import { AppBar, LightSwitch } from "@skeletonlabs/skeleton";
 </script>
 
-<nav class="flex p-8 justify-between" style={$page.route.id !== "/" && "order: -1"}>
-	<div class="flex w-32">
+<AppBar
+	class="fixed w-full flex-col md:flex-row gap-4 z-50"
+	shadow="shadow-md"
+	slotLead="w-32"
+	slotTrail="w-32"
+>
+	<svelte:fragment slot="lead">
 		{#if $page.route.id !== "/"}
 			<a class="flex items-center gap-4" href="/">
-				<Fa icon={faArrowLeftLong} /> Back
+				<Fa icon={faArrowLeftLong} /> Home
 			</a>
 		{/if}
-	</div>
-	<div class="flex gap-8">
-		<a class="flex items-center" href="/about">About Me</a>
+	</svelte:fragment>
+
+	<div class="flex justify-center gap-8">
+		<a class="flex items-center" href="/about">About</a>
 		<a class="flex items-center" href="/contact">Contact</a>
 	</div>
-	<div class="flex w-32 justify-end gap-4">
-		<a href="https://github.com/blakerumpel" target="_blank" rel="noreferrer">
-			<Fa icon={faGithub} size="2x" />
-		</a>
-		<a href="https://www.linkedin.com/in/blake-rumpel/" target="_blank" rel="noreferrer">
-			<Fa icon={faLinkedin} size="2x" />
-		</a>
-	</div>
-</nav>
+
+	<svelte:fragment slot="trail">
+		<div class="flex w-32 justify-center md:justify-end items-center gap-4">
+			<a href="https://github.com/blakerumpel" target="_blank" rel="noreferrer">
+				<Fa icon={faGithub} size="2x" />
+			</a>
+			<a href="https://www.linkedin.com/in/blake-rumpel/" target="_blank" rel="noreferrer">
+				<Fa icon={faLinkedin} size="2x" />
+			</a>
+
+			<LightSwitch class="pr-8 ml-4" />
+		</div>
+	</svelte:fragment>
+</AppBar>
