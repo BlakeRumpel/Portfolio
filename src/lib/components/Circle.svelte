@@ -7,7 +7,7 @@
 	export let size: "large" | "normal" = "normal";
 	export let style: string = "";
 	export let index: number;
-	export let selected: number | undefined;
+	export let selected: number | undefined = undefined;
 
 	const dispatch = createEventDispatcher();
 
@@ -19,7 +19,7 @@
 	function onMouseEnter() {
 		anime({
 			targets: "#circle-" + index,
-			scale: () => 1.1
+			scale: () => 1.25
 		});
 	}
 
@@ -34,7 +34,7 @@
 <Motion let:motion layoutId={index}>
 	<div
 		id="circle-{index}"
-		class="flex absolute border-4 border-surface-900-50-token rounded-full justify-center items-center overflow-hidden cursor-pointer bg-primary-500
+		class="flex absolute border-4 border-surface-900-50-token rounded-full justify-center items-center overflow-hidden cursor-pointer bg-primary-500 [&>*]:grayscale [&>*]:hover:grayscale-0
 		{size === 'large'
 			? 'w-[200px] h-[200px] md:w-[300px] md:h-[300px]'
 			: 'w-[100px] h-[100px] p-4'} {className}"

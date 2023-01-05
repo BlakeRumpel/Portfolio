@@ -17,57 +17,35 @@
 
 	const list = [
 		{ id: 1 },
-		{ id: 2, title: "Blake's Mods", component: BlakesMods, x: 200, y: -200 },
-		{ id: 3, title: "TicketTote", component: TicketTote, x: -600, y: 200 },
-		{ id: 4, title: "Secret Project", component: Tudu, x: 150, y: 250 },
-		{ id: 5, title: "MITT", component: MITT, x: -650, y: -175 }
+		{ id: 2, title: "Blake's Mods", component: BlakesMods, x: "75%", y: "20%" },
+		{ id: 3, title: "TicketTote", component: TicketTote, x: "15%", y: "69%" },
+		{ id: 4, title: "Secret Project", component: Tudu, x: "80%", y: "60%" },
+		{ id: 5, title: "MITT", component: MITT, x: "0%", y: "25%" }
 	];
 
-	let widthMultiplier = 1;
-
-	const animateCircles = debounce(() => {
+	onMount(() => {
 		anime({
 			targets: ".stagger",
-			opacity: 1,
-			translateX: (el, i) => (list[i + 1].x + 200) * widthMultiplier,
-			translateY: (el, i) => list[i + 1].y,
-			delay: anime.stagger(250)
+			left: (el, i) => ["50%", list[i + 1].x],
+			top: (el, i) => ["50%", list[i + 1].y],
+			delay: anime.stagger(250, { start: 500 })
 		});
-	}, 700);
-
-	function onCloseCard() {
-		animateCircles();
-	}
-
-	function onResize() {
-		const width = window.innerWidth;
-		const minWidth = 1300;
-
-		widthMultiplier = Math.min(width / minWidth, 1);
-
-		animateCircles();
-	}
-
-	onMount(() => {
-		onResize();
 	});
 </script>
 
-<svelte:window on:resize={debounce(onResize, 100)} />
-
 <div
-	class="container flex flex-col md:flex-row relative h-full mx-auto mt-16 md:-mt-16 justify-center items-center"
+	class="container flex flex-col md:flex-row relative w-screen h-full mx-auto mt-16 md:-mt-16 justify-center items-center"
 >
-	<div class="space-y-2">
+	<div class="whitespace-nowrap space-y-2">
 		<h1>Blake Rumpel</h1>
 		<h3>Software Engineer</h3>
 	</div>
 
 	<AnimateSharedLayout type="crossfade">
 		<Motion let:motion layout>
-			<div use:motion class="flex relative h-full mx-auto justify-center items-center">
+			<div use:motion class="flex relative w-full h-full mx-auto justify-center items-center">
 				<Circle className="z-10" size="large" index={1} on:click={() => goto("/about")}>
-					<img src="https://i.pravatar.cc" alt="person" />
+					<img src="/img/profile.jpg" alt="self portrait" class="object-cover w-full h-full" />
 				</Circle>
 
 				<Circle className="stagger" index={2} bind:selected>
@@ -85,7 +63,7 @@
 			</div>
 		</Motion>
 		<AnimatePresence list={list.filter((i) => i.id === selected)} let:item>
-			<Card bind:selected {item} on:close={onCloseCard} />
+			<Card bind:selected {item} />
 		</AnimatePresence>
 	</AnimateSharedLayout>
 </div>

@@ -22,7 +22,7 @@
 
 	<div class="card max-w-xl mx-auto space-y-8 p-8">
 		<div class="flex flex-wrap gap-8">
-			<Avatar src="https://i.pravatar.cc" width="w-24" />
+			<Avatar src="/img/profile.jpg" width="w-24" />
 			<div class="flex flex-col justify-center">
 				<h3>Blake Rumpel</h3>
 				<p>Winnipeg MB, Canada</p>

@@ -12,15 +12,12 @@
 	slotLead="w-32"
 	slotTrail="w-32"
 >
-	<svelte:fragment slot="lead">
+	<div class="flex gap-8">
 		{#if $page.route.id !== "/"}
 			<a class="flex items-center gap-4" href="/">
 				<Fa icon={faArrowLeftLong} /> Home
 			</a>
 		{/if}
-	</svelte:fragment>
-
-	<div class="flex justify-center gap-8">
 		<a class="flex items-center" href="/about">About</a>
 		<a class="flex items-center" href="/contact">Contact</a>
 	</div>

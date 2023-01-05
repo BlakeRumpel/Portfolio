@@ -51,7 +51,7 @@
 
 	<div class="card max-w-6xl mx-auto space-y-8 p-4">
 		<div class="card-header flex gap-8">
-			<Avatar src="https://i.pravatar.cc/" rounded="rounded-xl" width="w-64" />
+			<Avatar src="/img/profile.jpg" rounded="rounded-xl" width="w-64" />
 			Hi, I'm Blake! I'm a {dayjs().diff(birthday, "years")} year old software engineer from Winnipeg
 			MB, Canada.
 		</div>

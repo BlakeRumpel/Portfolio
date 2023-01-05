@@ -34,7 +34,7 @@
 
 	<Divider />
 
-	<div class="space-y-4">
+	<div class="max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">
 			<h3>What is TicketTote?</h3>
 			<p>
@@ -50,6 +50,188 @@
 				TicketTote is meant to be a complete event and ticket management platform that is both feature
 				rich and easy to use.
 			</p>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
+		</div>
+		<div class="space-y-2">
+			<h3>What did I work on at TicketTote?</h3>
+			<p>
+				In the 3 years I worked at TicketTote, I worked full stack on everything from the frontend
+				to the backend. I also handled system administration duties as well as system/infrastructure
+				design and implementation.
+			</p>
+			<ul>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+				<li>
+					<span>&bull;</span>
+					<span class="flex-auto">Skeleton</span>
+				</li>
+			</ul>
 		</div>
 		<div class="space-y-2">
 			<h3>What did I work on at TicketTote?</h3>
