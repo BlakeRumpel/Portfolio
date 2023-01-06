@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex flex-col space-y-8">
-	<div class="flex justify-between">
+	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
 			<img src="/img/mitt.png" alt="tickettote logo" width="160" />
 			<div class="flex flex-col justify-center">
@@ -35,7 +35,10 @@
 	<div class="space-y-4">
 		<div class="space-y-2">
 			<h3>What is MITT?</h3>
-			<p>MITT is a trade school in Winnipeg.</p>
+			<p>
+				MITT is the trade school I went to in Winnipeg. There I took the Software Development course
+				and graduated at the top of my class.
+			</p>
 		</div>
 	</div>
 </div>

@@ -16,6 +16,8 @@
 	import dayjs from "dayjs";
 
 	const birthday = dayjs("2000-07-11");
+	const started = dayjs("2015-06-01");
+	const professional = dayjs("2019-06-01");
 
 	const languages = [
 		{ name: "HTML", icon: faHtml5 },
@@ -38,7 +40,7 @@
 	<title>About Me &bull; Blake Rumpel</title>
 </svelte:head>
 
-<div class="container mx-auto my-8 space-y-8">
+<div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
 	<GradientHeading
 		class="text-center"
 		tag="h1"
@@ -50,15 +52,56 @@
 	</GradientHeading>
 
 	<div class="card max-w-6xl mx-auto space-y-8 p-4">
-		<div class="card-header flex gap-8">
-			<Avatar src="/img/profile.jpg" rounded="rounded-xl" width="w-64" />
-			Hi, I'm Blake! I'm a {dayjs().diff(birthday, "years")} year old software engineer from Winnipeg
-			MB, Canada.
+		<div class="card-header flex flex-col lg:flex-row gap-8">
+			<div class="flex justify-center">
+				<Avatar src="/img/profile.jpg" rounded="rounded-xl" width="w-48" />
+			</div>
+			<div class="flex flex-col gap-4">
+				<p>
+					Hi, I'm Blake! I'm a {dayjs().diff(birthday, "years")} year old software engineer from Winnipeg
+					MB, Canada.
+				</p>
+				<p>
+					I've been writing software for {dayjs().diff(started, "years")} years as a hobby and professionally
+					for {dayjs().diff(professional, "years")} years.
+				</p>
+				<p>
+					I have a passion for creating feature rich applications that solve complex problems using
+					elegant solutions. I enjoy finding solutions to coding problems and solving them to the
+					best of my ability. Buzzwords aside, I have the know-how to get the job done.
+				</p>
+			</div>
 		</div>
 
 		<Divider />
 
-		<div class="px-4">Howdy</div>
+		<div class="flex flex-col px-4 gap-4">
+			<h2>Backstory</h2>
+			<div class="flex flex-col gap-4">
+				<p>
+					I started writing software back in 2015 creating <a
+						href="https://blakesmods.com"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Minecraft mods.
+					</a>
+					Not too long after I released my first mod, it started to gain traction. This motivated me
+					to keep developing mods and to take computer science in high school.
+				</p>
+				<p>
+					After high school I enrolled at <a
+						href="https://mitt.ca"
+						target="_blank"
+						rel="noreferrer"
+					>
+						MITT
+					</a>
+					and started on my web development career. I was offered a job right out of college.
+				</p>
+				<p><a href="/experience">View Work Experience &rAarr;</a></p>
+			</div>
+		</div>
 
 		<Divider />
 

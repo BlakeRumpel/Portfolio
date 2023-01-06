@@ -25,7 +25,7 @@
 </script>
 
 <div class="flex flex-col space-y-8">
-	<div class="flex justify-between">
+	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
 			<img src="/img/blakesmods.png" alt="blakes mods logo" width="60" />
 			<div class="flex flex-col justify-center">
@@ -50,7 +50,6 @@
 
 	<div class="space-y-4">
 		<div class="space-y-2">
-			<h3>What is Blake's Mods?</h3>
 			<p>
 				Blake's Mods is the umbrella term for all of my Minecraft mods. Minecraft modding was my
 				first endeavor into programming. I started creating Minecraft mods back in 2015, and have
@@ -59,6 +58,25 @@
 					</span>
 				{:else}<!--suppress CheckEmptyScriptTag -->
 					<div class="inline-block placeholder animate-pulse w-24 align-middle" />{/if} downloads!
+			</p>
+			<p>
+				Minecraft mods are coded using Java, and are compiled into jar files which can be installed
+				by an end user by simply dropping that jar into their mods folder. Mods add additional
+				content and features to the base Minecraft game.
+			</p>
+			<p>
+				I initially released all my mods on <a
+					href="https://www.curseforge.com/minecraft/mc-mods"
+					target="_blank"
+					rel="noreferrer"
+				>
+					CurseForge,
+				</a>
+				the most popular hub for Minecraft mods. Recently, I decided to distribute my mods on my own
+				website,
+				<a href="https://blakesmods.com" target="_blank" rel="noreferrer">blakesmods.com,</a>
+				as well as the new CurseForge competitor,
+				<a href="https://modrinth.com/mods" target="_blank" rel="noreferrer">Modrinth.</a>
 			</p>
 		</div>
 	</div>

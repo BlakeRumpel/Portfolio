@@ -9,7 +9,7 @@
 	<title>Contact Me &bull; Blake Rumpel</title>
 </svelte:head>
 
-<div class="container mx-auto my-8 space-y-8">
+<div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
 	<GradientHeading
 		class="text-center"
 		tag="h1"

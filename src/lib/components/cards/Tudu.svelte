@@ -13,7 +13,7 @@
 </script>
 
 <div class="flex flex-col space-y-8">
-	<div class="flex justify-between">
+	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
 			<Fa icon={faQuestion} size="5x" />
 			<div class="flex flex-col justify-center">
@@ -40,9 +40,6 @@
 	<Divider />
 
 	<div class="space-y-4">
-		<h3>
-			What is <i>New Project?</i>
-		</h3>
 		<p>(redacted)</p>
 	</div>
 </div>

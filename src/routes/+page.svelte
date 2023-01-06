@@ -26,8 +26,8 @@
 	onMount(() => {
 		anime({
 			targets: ".stagger",
-			left: (el, i) => ["50%", list[i + 1].x],
-			top: (el, i) => ["50%", list[i + 1].y],
+			left: (el, i) => ["48%", list[i + 1].x],
+			top: (el, i) => ["48%", list[i + 1].y],
 			delay: anime.stagger(250, { start: 500 })
 		});
 	});
@@ -36,7 +36,7 @@
 <div
 	class="container flex flex-col md:flex-row relative w-screen h-full mx-auto mt-16 md:-mt-16 justify-center items-center"
 >
-	<div class="whitespace-nowrap space-y-2">
+	<div class="whitespace-nowrap space-y-2 text-center md:text-left">
 		<h1>Blake Rumpel</h1>
 		<h3>Software Engineer</h3>
 	</div>
