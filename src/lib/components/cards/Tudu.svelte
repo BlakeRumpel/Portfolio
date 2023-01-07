@@ -12,7 +12,7 @@
 	import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 </script>
 
-<div class="flex flex-col space-y-8">
+<div class="flex flex-col space-y-4 md:space-y-8">
 	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
 			<Fa icon={faQuestion} size="5x" />
@@ -21,7 +21,7 @@
 				<a href="" target="_blank" rel="noreferrer">???</a>
 			</div>
 		</div>
-		<div class="flex flex-col gap-4">
+		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Personal Project</span>
 			<div class="flex justify-end items-center gap-2">
 				<span use:tooltip={{ content: "JavaScript" }}>
@@ -39,7 +39,7 @@
 
 	<Divider />
 
-	<div class="space-y-4">
+	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<p>(redacted)</p>
 	</div>
 </div>

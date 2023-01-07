@@ -39,7 +39,13 @@
 
 <svelte:head>
 	<title>Blake Rumpel</title>
-	<meta name="description" content="The portfolio site of software engineer Blake Rumpel!" />
+	<meta name="description" content="This is my portfolio. Check out the things I've worked on!" />
+	<meta name="og:title" content="Blake Rumpel" />
+	<meta
+		name="og:description"
+		content="This is my portfolio. Check out the things I've worked on!"
+	/>
+	<meta name="og:image" content="https://blakerumpel.com/img/og-image.png" />
 	<script src="/js/three.min.js"></script>
 	<script src="/js/vanta.net.min.js"></script>
 </svelte:head>

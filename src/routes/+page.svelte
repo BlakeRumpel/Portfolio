@@ -26,8 +26,8 @@
 	onMount(() => {
 		anime({
 			targets: ".stagger",
-			left: (el, i) => ["48%", list[i + 1].x],
-			top: (el, i) => ["48%", list[i + 1].y],
+			left: (el, i) => ["46%", list[i + 1].x],
+			top: (el, i) => ["46%", list[i + 1].y],
 			delay: anime.stagger(250, { start: 500 })
 		});
 	});

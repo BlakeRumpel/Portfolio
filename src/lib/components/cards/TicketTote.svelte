@@ -4,16 +4,16 @@
 	import { faGolang, faJs, faPhp, faVuejs } from "@fortawesome/free-brands-svg-icons";
 </script>
 
-<div class="flex flex-col space-y-8">
+<div class="flex flex-col space-y-4 md:space-y-8">
 	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
-			<img src="/img/tickettote.png" alt="tickettote logo" width="80" />
+			<img src="/img/tickettote.png" alt="tickettote logo" class="block w-16 h-auto" />
 			<div class="flex flex-col justify-center">
 				<h2>TicketTote</h2>
 				<a href="https://tickettote.com" target="_blank" rel="noreferrer">tickettote.com</a>
 			</div>
 		</div>
-		<div class="flex flex-col gap-4">
+		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Employment</span>
 			<div class="flex justify-end items-center gap-2">
 				<span use:tooltip={{ content: "JavaScript" }}>
@@ -34,7 +34,7 @@
 
 	<Divider />
 
-	<div class="max-h-[376px] space-y-4 overflow-y-auto">
+	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">
 			<p>
 				TicketTote is an online event ticketing platform, similar to sites like <a

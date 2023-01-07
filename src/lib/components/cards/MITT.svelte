@@ -5,7 +5,7 @@
 	import CSharp from "$lib/components/icons/CSharp.svelte";
 </script>
 
-<div class="flex flex-col space-y-8">
+<div class="flex flex-col space-y-4 md:space-y-8">
 	<div class="flex flex-wrap justify-between gap-4">
 		<div class="flex gap-8">
 			<img src="/img/mitt.png" alt="tickettote logo" width="160" />
@@ -14,7 +14,7 @@
 				<a href="https://https://mitt.ca/" target="_blank" rel="noreferrer">mitt.ca</a>
 			</div>
 		</div>
-		<div class="flex flex-col gap-4">
+		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Education</span>
 			<div class="flex justify-end items-center gap-2">
 				<span use:tooltip={{ content: "JavaScript" }}>
@@ -32,12 +32,12 @@
 
 	<Divider />
 
-	<div class="space-y-4">
+	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">
 			<h3>What is MITT?</h3>
 			<p>
-				MITT is the trade school I went to in Winnipeg. There I took the Software Development course
-				and graduated at the top of my class.
+				MITT is the trade school I went to in Winnipeg. I graduated from the Software Developer
+				program.
 			</p>
 		</div>
 	</div>
