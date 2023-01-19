@@ -34,7 +34,7 @@
 	<svelte:fragment slot="trail">
 		<div class="flex w-32 justify-center md:justify-end items-center gap-4">
 			<a
-				href="https://github.com/blakerumpel"
+				href="https://github.com/blakebr0"
 				target="_blank"
 				rel="noreferrer"
 				class="hover:text-primary-100"
