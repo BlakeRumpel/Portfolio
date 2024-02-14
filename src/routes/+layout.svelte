@@ -1,19 +1,21 @@
 <script lang="ts">
 	import type { LayoutData } from "./$types";
-	import "@skeletonlabs/skeleton/themes/theme-crimson.css";
-	import "@skeletonlabs/skeleton/styles/all.css";
 	import "../app.postcss";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import { fly, slide } from "svelte/transition";
 	import { onDestroy, onMount } from "svelte";
-	import { storeLightSwitch } from "@skeletonlabs/skeleton";
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from "@floating-ui/dom";
+	import { modeCurrent, storePopup } from "@skeletonlabs/skeleton";
+
+	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
 	export let data: LayoutData;
 
-	let background;
-	let unsubscribe;
+	let background: any;
+	let unsubscribe: any;
 
 	onMount(() => {
+		// @ts-ignore
 		background = VANTA.NET({
 			el: "#background",
 			mouseControls: false,
@@ -24,11 +26,11 @@
 			scale: 1.0,
 			scaleMobile: 1.0,
 			color: "#333",
-			backgroundColor: $storeLightSwitch ? "#15171f" : "#dfe0e2"
+			backgroundColor: !$modeCurrent ? "#15171f" : "#dfe0e2"
 		});
 
-		unsubscribe = storeLightSwitch.subscribe((value) => {
-			background.options.backgroundColor = value ? "#15171f" : "#dfe0e2";
+		unsubscribe = modeCurrent.subscribe((value) => {
+			background.options.backgroundColor = !value ? "#15171f" : "#dfe0e2";
 		});
 	});
 

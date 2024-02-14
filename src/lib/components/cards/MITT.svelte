@@ -1,8 +1,8 @@
 <script>
-	import { Divider, tooltip } from "@skeletonlabs/skeleton";
 	import Fa from "svelte-fa";
 	import { faJs, faReact } from "@fortawesome/free-brands-svg-icons";
 	import CSharp from "$lib/components/icons/CSharp.svelte";
+	import LanguageIcon from "$lib/components/LanguageIcon.svelte";
 </script>
 
 <div class="flex flex-col space-y-4 md:space-y-8">
@@ -17,20 +17,16 @@
 		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Education</span>
 			<div class="flex justify-end items-center gap-2">
-				<span use:tooltip={{ content: "JavaScript" }}>
-					<Fa icon={faJs} size="lg" />
-				</span>
-				<span use:tooltip={{ content: "React" }}>
-					<Fa icon={faReact} size="lg" />
-				</span>
-				<span class="fill-surface-900 dark:fill-surface-50" use:tooltip={{ content: "C#" }}>
+				<LanguageIcon name="JavaScript" icon={faJs} />
+				<LanguageIcon name="React" icon={faReact} />
+				<LanguageIcon name="C#">
 					<CSharp size="21" />
-				</span>
+				</LanguageIcon>
 			</div>
 		</div>
 	</div>
 
-	<Divider />
+	<hr />
 
 	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">

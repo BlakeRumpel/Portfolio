@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Divider, tooltip } from "@skeletonlabs/skeleton";
 	import { onMount } from "svelte";
 	import numeral from "numeral";
 	import Fa from "svelte-fa";
 	import { faJava, faJs } from "@fortawesome/free-brands-svg-icons";
+	import LanguageIcon from "$lib/components/LanguageIcon.svelte";
 
 	let downloads: number | null = null;
 
@@ -36,17 +36,13 @@
 		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Personal Project</span>
 			<div class="flex justify-end items-center gap-2">
-				<span use:tooltip={{ content: "Java <br> (Mod Development)" }}>
-					<Fa icon={faJava} size="lg" />
-				</span>
-				<span use:tooltip={{ content: "JavaScript <br> (Website)" }}>
-					<Fa icon={faJs} size="lg" />
-				</span>
+				<LanguageIcon name="Java <br> (Mod Development)" icon={faJava} />
+				<LanguageIcon name="JavaScript <br> (Website)" icon={faJs} />
 			</div>
 		</div>
 	</div>
 
-	<Divider />
+	<hr />
 
 	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">

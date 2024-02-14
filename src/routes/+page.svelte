@@ -15,18 +15,18 @@
 	let selected: number | undefined;
 
 	const list = [
-		{ id: 1 }, // center profile pic
-		{ id: 2, title: "Blake's Mods", component: BlakesMods, x: "75%", y: "20%" },
-		{ id: 3, title: "TicketTote", component: TicketTote, x: "15%", y: "69%" },
-		{ id: 4, title: "Secret Project", component: Tudu, x: "80%", y: "60%" },
-		{ id: 5, title: "MITT", component: MITT, x: "0%", y: "25%" }
+		{ id: 1, key: "1" }, // center profile pic
+		{ id: 2, key: "2", title: "Blake's Mods", component: BlakesMods, x: "75%", y: "20%" },
+		{ id: 3, key: "3", title: "TicketTote", component: TicketTote, x: "15%", y: "69%" },
+		{ id: 4, key: "4", title: "Secret Project", component: Tudu, x: "80%", y: "60%" },
+		{ id: 5, key: "5", title: "MITT", component: MITT, x: "0%", y: "25%" }
 	];
 
 	onMount(() => {
 		anime({
 			targets: ".stagger",
-			left: (el, i) => ["46%", list[i + 1].x],
-			top: (el, i) => ["46%", list[i + 1].y],
+			left: (el: any, i: number) => ["46%", list[i + 1].x],
+			top: (el: any, i: number) => ["46%", list[i + 1].y],
 			delay: anime.stagger(250, { start: 500 })
 		});
 	});

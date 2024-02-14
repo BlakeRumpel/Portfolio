@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Divider, GradientHeading } from "@skeletonlabs/skeleton";
+	import { Avatar } from "@skeletonlabs/skeleton";
 	import Fa from "svelte-fa";
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 	import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -10,15 +10,7 @@
 </svelte:head>
 
 <div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
-	<GradientHeading
-		class="text-center"
-		tag="h1"
-		direction="bg-gradient-to-r"
-		from="from-warning-500"
-		to="to-primary-500"
-	>
-		Contact Me
-	</GradientHeading>
+	<h1 class="text-center gradient-heading">Contact Me</h1>
 
 	<div class="card max-w-xl mx-auto space-y-8 p-8">
 		<div class="flex flex-wrap gap-8">
@@ -42,7 +34,7 @@
 			</div>
 		</div>
 
-		<Divider />
+		<hr />
 
 		<form action="https://formbold.com/s/6Qg53" method="POST" class="grid gap-4">
 			<label for="name" class="col-span-2 md:col-span-1">

@@ -3,7 +3,7 @@
 	import { createEventDispatcher } from "svelte";
 
 	export let selected: number | undefined;
-	export let item;
+	export let item: any;
 
 	const dispatch = createEventDispatcher();
 

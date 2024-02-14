@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Divider, GradientHeading, Stepper, tooltip } from "@skeletonlabs/skeleton";
+	import { Avatar, Stepper } from "@skeletonlabs/skeleton";
 	import {
 		faCss3,
 		faGolang,
@@ -26,22 +26,14 @@
 </svelte:head>
 
 <div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
-	<GradientHeading
-		class="text-center"
-		tag="h1"
-		direction="bg-gradient-to-r"
-		from="from-warning-500"
-		to="to-primary-500"
-	>
-		Work Experience
-	</GradientHeading>
+	<h1 class="text-center gradient-heading">Work Experience</h1>
 
 	<div class="card max-w-6xl mx-auto space-y-8 p-8">
 		<div class="flex flex-col gap-8">
 			<h2>Employment History</h2>
 			<div class="flex flex-col gap-4">
 				<Stepper>
-					<Step index="1">
+					<Step index={1}>
 						<svelte:fragment slot="header">
 							<h4>Sync Digital Solutions & TicketTote</h4>
 							<small class="block">
@@ -51,7 +43,7 @@
 
 						<p>Full Stack Developer</p>
 					</Step>
-					<Step index="2" last>
+					<Step index={2} last>
 						<svelte:fragment slot="header">
 							<h4>Unemployed</h4>
 							<small class="block">(Oct 2022 - Now)</small>

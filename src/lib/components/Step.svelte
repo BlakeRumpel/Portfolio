@@ -1,8 +1,8 @@
-<script>
-	export let index;
+<script lang="ts">
+	export let index: number;
 	export let last = false;
 
-	let color;
+	let color: string;
 
 	$: color = last ? "bg-surface-300-600-token" : "bg-primary-500";
 </script>
@@ -19,7 +19,7 @@
 			<div class="w-1 h-full {color}" />
 		{/if}
 	</div>
-	<div class={!last && "mb-4"}>
+	<div class={!last ? "mb-4" : ""}>
 		<header class="mb-2">
 			<slot name="header"><h4>Step {index}</h4></slot>
 		</header>

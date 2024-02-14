@@ -1,7 +1,8 @@
 <script>
-	import { Divider, tooltip } from "@skeletonlabs/skeleton";
+	import { popup } from "@skeletonlabs/skeleton";
 	import Fa from "svelte-fa";
 	import { faGolang, faJs, faPhp, faVuejs } from "@fortawesome/free-brands-svg-icons";
+	import LanguageIcon from "$lib/components/LanguageIcon.svelte";
 </script>
 
 <div class="flex flex-col space-y-4 md:space-y-8">
@@ -16,23 +17,15 @@
 		<div class="flex md:flex-col gap-4">
 			<span class="badge badge-filled-primary">Employment</span>
 			<div class="flex justify-end items-center gap-2">
-				<span use:tooltip={{ content: "JavaScript" }}>
-					<Fa icon={faJs} size="lg" />
-				</span>
-				<span use:tooltip={{ content: "VueJS" }}>
-					<Fa icon={faVuejs} size="lg" />
-				</span>
-				<span use:tooltip={{ content: "PHP" }}>
-					<Fa icon={faPhp} size="lg" />
-				</span>
-				<span use:tooltip={{ content: "Go" }}>
-					<Fa icon={faGolang} size="lg" />
-				</span>
+				<LanguageIcon name="JavaScript" icon={faJs} />
+				<LanguageIcon name="VueJS" icon={faVuejs} />
+				<LanguageIcon name="PHP" icon={faPhp} />
+				<LanguageIcon name="Go" icon={faGolang} />
 			</div>
 		</div>
 	</div>
 
-	<Divider />
+	<hr />
 
 	<div class="max-h-[296px] md:max-h-[376px] space-y-4 overflow-y-auto">
 		<div class="space-y-2">

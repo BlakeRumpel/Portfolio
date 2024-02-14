@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Divider, GradientHeading, tooltip } from "@skeletonlabs/skeleton";
+	import { Avatar, popup } from "@skeletonlabs/skeleton";
 	import {
 		faCss3,
 		faGolang,
@@ -41,15 +41,7 @@
 </svelte:head>
 
 <div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
-	<GradientHeading
-		class="text-center"
-		tag="h1"
-		direction="bg-gradient-to-r"
-		from="from-warning-500"
-		to="to-primary-500"
-	>
-		About Me
-	</GradientHeading>
+	<h1 class="text-center gradient-header">About Me</h1>
 
 	<div class="card max-w-6xl mx-auto space-y-8 p-4">
 		<div class="card-header flex flex-col lg:flex-row gap-8">
@@ -73,7 +65,7 @@
 			</div>
 		</div>
 
-		<Divider />
+		<hr />
 
 		<div class="flex flex-col px-4 gap-4">
 			<h2>Backstory</h2>
@@ -103,15 +95,15 @@
 			</div>
 		</div>
 
-		<Divider />
+		<hr />
 
 		<div class="card-footer space-y-8">
 			<h2>Languages</h2>
 			<div class="flex flex-wrap gap-4">
-				{#each languages as language}
+				{#each languages as language, index}
 					<div
-						class="flex w-16 h-16 justify-center items-center text-5xl rounded-xl border-2 border-surface-400-500-token hover:bg-surface-200-700-token"
-						use:tooltip={{ content: language.name }}
+						class="flex w-16 h-16 justify-center items-center text-5xl rounded-xl border-2 border-surface-400-500-token hover:bg-surface-200-700-token [&>*]:pointer-events-none"
+						use:popup={{ event: "hover", target: `language-popup-${index}` }}
 					>
 						{#if language.icon}
 							<Fa icon={language.icon} />
@@ -123,15 +115,18 @@
 							</span>
 						{/if}
 					</div>
+					<span class="bg-primary-500 p-2 rounded-lg" data-popup="language-popup-{index}">
+						{language.name}
+					</span>
 				{/each}
 			</div>
 
 			<h2>Frameworks</h2>
 			<div class="flex flex-wrap gap-4">
-				{#each frameworks as framework}
+				{#each frameworks as framework, index}
 					<div
-						class="flex w-16 h-16 justify-center items-center text-5xl rounded-xl border-2 border-surface-400-500-token hover:bg-surface-200-700-token"
-						use:tooltip={{ content: framework.name }}
+						class="flex w-16 h-16 justify-center items-center text-5xl rounded-xl border-2 border-surface-400-500-token hover:bg-surface-200-700-token [&>*]:pointer-events-none"
+						use:popup={{ event: "hover", target: `framework-popup-${index}` }}
 					>
 						{#if framework.icon}
 							<Fa icon={framework.icon} />
@@ -143,6 +138,9 @@
 							</span>
 						{/if}
 					</div>
+					<span class="bg-primary-500 p-2 rounded-lg" data-popup="framework-popup-{index}">
+						{framework.name}
+					</span>
 				{/each}
 			</div>
 		</div>
