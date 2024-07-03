@@ -9,15 +9,15 @@
 	<title>Contact Me &bull; Blake Rumpel</title>
 </svelte:head>
 
-<div class="container mx-auto mt-16 mb-8 md:mt-8 space-y-8">
-	<h1 class="text-center gradient-heading">Contact Me</h1>
+<section id="contact" class="flex flex-col my-16 gap-16 scroll-m-16">
+	<h1 class="text-center">Contact Me</h1>
 
-	<div class="card max-w-xl mx-auto space-y-8 p-8">
+	<div class="card w-full max-w-xl mx-auto space-y-8 p-8">
 		<div class="flex flex-wrap gap-8">
 			<Avatar src="/img/profile.jpg" width="w-24" />
-			<div class="flex flex-col justify-center">
+			<div class="flex flex-col gap-2 justify-center">
 				<h3>Blake Rumpel</h3>
-				<p>Winnipeg MB, Canada</p>
+				<p>Let's get in touch!</p>
 				<div class="flex gap-4">
 					<a class="flex items-center gap-2" href="mailto:hi@blakerumpel.com">
 						<Fa icon={faEnvelope} /> Email
@@ -51,12 +51,11 @@
 			</label>
 			<label for="message" class="col-span-2">
 				<span>Message</span>
-				<!--suppress CheckEmptyScriptTag -->
 				<textarea id="message" rows="6" name="message" required />
 			</label>
 
 			<div>&nbsp;</div>
-			<button type="submit" class="btn btn-filled-primary">Submit</button>
+			<button type="submit" class="btn variant-filled-primary">Submit</button>
 		</form>
 	</div>
-</div>
+</section>

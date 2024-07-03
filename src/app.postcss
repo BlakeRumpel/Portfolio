@@ -1,14 +1,30 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/font/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/font/Quicksand-Bold.ttf);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body { @apply h-full overflow-hidden; }
+html, body { @apply h-full; }
 
-h1 { @apply h1; }
-h2 { @apply h2; }
-h3 { @apply h3; }
-h4 { @apply h4; }
-h5 { @apply h5; }
+h1 { @apply h1 font-bold; }
+h2 { @apply h2 font-bold; }
+h3 { @apply h3 font-bold; }
+h4 { @apply h4 font-bold; }
+h5 { @apply h5 font-bold; }
 
 a { @apply anchor; }
 
@@ -17,15 +33,3 @@ button { @apply btn variant-filled; }
 label { @apply label; }
 input { @apply input; }
 textarea { @apply textarea rounded-none; }
-
-.app-bar-row-main {
-  @apply flex w-full flex-col md:flex-row;
-}
-
-.gradient-heading {
-	@apply bg-clip-text text-transparent box-decoration-clone;
-	/* Direction */
-	@apply bg-gradient-to-br;
-	/* Color Stops */
-	@apply from-warning-500 to-primary-500;
-}
