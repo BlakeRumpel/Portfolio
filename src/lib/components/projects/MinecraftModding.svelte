@@ -1,21 +1,25 @@
 <script lang="ts">
 	import Fa from "svelte-fa";
-	import { faJava, faJs, faVuejs } from "@fortawesome/free-brands-svg-icons";
+	import { faJava, faVuejs } from "@fortawesome/free-brands-svg-icons";
 	import LanguageIcon from "$lib/components/LanguageIcon.svelte";
 	import ModDownloadCount from "$lib/components/ModDownloadCount.svelte";
 	import Project from "$lib/components/Project.svelte";
+	import TypeScript from "$lib/components/icons/TypeScript.svelte";
 </script>
 
 <Project
 	name="Minecraft Modding"
 	image="/img/blakesmods.png"
 	type="Personal Project"
+	synopsis="Multiple popular mods for Minecraft: Java Edition."
 	website="blakesmods.com"
 >
 	<svelte:fragment slot="languages">
 		<LanguageIcon name="Java <br> (Mod Development)" icon={faJava} />
-		<LanguageIcon name="TypeScript <br> (Website)" icon={faJs} />
 		<LanguageIcon name="Vue <br> (Website)" icon={faVuejs} />
+		<LanguageIcon name="TypeScript <br> (Website)">
+			<TypeScript size="20" />
+		</LanguageIcon>
 	</svelte:fragment>
 
 	<div class="space-y-2">

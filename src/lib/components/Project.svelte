@@ -1,11 +1,17 @@
 <script lang="ts">
+	import Fa from "svelte-fa";
+	import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 	export let name: string;
 	export let image: string;
 	export let type: string;
 	export let website: string;
+	export let synopsis: string;
+
+	let showDescription = false;
 </script>
 
-<div class="flex flex-col space-y-4 md:space-y-8">
+<div class="flex flex-col gap-y-4">
 	<div class="flex flex-wrap justify-between gap-8">
 		<div class="flex gap-8">
 			<img src={image} alt="" class="block w-16 h-16" />
@@ -28,5 +34,18 @@
 
 	<hr />
 
-	<slot />
+	{synopsis}
+
+	<div>
+		<button
+			class="btn btn-sm variant-soft-primary"
+			on:click={() => (showDescription = !showDescription)}
+		>
+			Learn More <Fa class="ml-3" icon={showDescription ? faChevronUp : faChevronDown} />
+		</button>
+	</div>
+
+	{#if showDescription}
+		<slot />
+	{/if}
 </div>

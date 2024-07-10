@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import numeral from "numeral";
-
-	let downloads: number | undefined;
+	import { modDownloads } from "$lib/stores";
 
 	onMount(() => {
+		if (typeof $modDownloads !== "undefined") {
+			return;
+		}
+
 		fetch("https://api.blakesmods.com/v2/mods")
 			.then((res) => res.json())
 			.then((res) => {
@@ -15,15 +18,15 @@
 					total += mod.curseforge_downloads + mod.modrinth_downloads + mod.site_downloads;
 				}
 
-				downloads = total;
+				$modDownloads = total;
 			})
 			.catch((err) => console.log(err));
 	});
 </script>
 
-{#if downloads}
+{#if $modDownloads}
 	<span class="inline-flex font-bold">
-		{numeral(downloads).format()}
+		{numeral($modDownloads).format()}
 	</span>
 {:else}
 	<div class="inline-block placeholder animate-pulse w-24 align-middle" />

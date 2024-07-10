@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { Avatar } from "@skeletonlabs/skeleton";
 	import {
 		faCss3,
@@ -6,6 +6,7 @@
 		faHtml5,
 		faJava,
 		faJs,
+		faLaravel,
 		faPhp,
 		faReact,
 		faVuejs
@@ -13,6 +14,7 @@
 	import Fa from "svelte-fa";
 	import CSharp from "$lib/components/icons/CSharp.svelte";
 	import Svelte from "$lib/components/icons/Svelte.svelte";
+	import TypeScript from "$lib/components/icons/TypeScript.svelte";
 	import dayjs from "dayjs";
 
 	const birthday = dayjs("2000-07-11");
@@ -23,13 +25,15 @@
 		{ name: "HTML", icon: faHtml5 },
 		{ name: "CSS", icon: faCss3 },
 		{ name: "JavaScript", icon: faJs },
+		{ name: "TypeScript", component: TypeScript },
 		{ name: "Java", icon: faJava },
 		{ name: "Go", icon: faGolang },
 		{ name: "PHP", icon: faPhp },
 		{ name: "C#", component: CSharp },
 		{ name: "React", icon: faReact },
 		{ name: "Vue", icon: faVuejs },
-		{ name: "Svelte", component: Svelte }
+		{ name: "Svelte", component: Svelte },
+		{ name: "Laravel", icon: faLaravel }
 	];
 </script>
 

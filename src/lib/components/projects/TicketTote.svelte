@@ -1,16 +1,26 @@
-<script>
+<script lang="ts">
 	import Fa from "svelte-fa";
 	import { faGolang, faJs, faPhp, faVuejs } from "@fortawesome/free-brands-svg-icons";
 	import LanguageIcon from "$lib/components/LanguageIcon.svelte";
 	import Project from "$lib/components/Project.svelte";
+	import TypeScript from "$lib/components/icons/TypeScript.svelte";
 </script>
 
-<Project name="TicketTote" image="/img/tickettote.png" type="Employment" website="tickettote.com">
+<Project
+	name="TicketTote"
+	image="/img/tickettote.png"
+	type="Employment"
+	synopsis="A complete event and ticket management platform."
+	website="tickettote.com"
+>
 	<svelte:fragment slot="languages">
 		<LanguageIcon name="JavaScript" icon={faJs} />
 		<LanguageIcon name="VueJS" icon={faVuejs} />
 		<LanguageIcon name="PHP" icon={faPhp} />
 		<LanguageIcon name="Go" icon={faGolang} />
+		<LanguageIcon name="TypeScript">
+			<TypeScript size="20" />
+		</LanguageIcon>
 	</svelte:fragment>
 
 	<div class="space-y-2">

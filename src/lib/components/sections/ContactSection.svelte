@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { Avatar } from "@skeletonlabs/skeleton";
 	import Fa from "svelte-fa";
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons";

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import "../app.postcss";
+	import "../app.pcss";
 	import { onMount } from "svelte";
 	import { computePosition, autoUpdate, offset, shift, flip, arrow } from "@floating-ui/dom";
 	import { storePopup } from "@skeletonlabs/skeleton";
