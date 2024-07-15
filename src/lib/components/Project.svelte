@@ -12,7 +12,7 @@
 </script>
 
 <div class="flex flex-col gap-y-4">
-	<div class="flex flex-wrap justify-between gap-8">
+	<div class="flex flex-col lg:flex-row justify-between gap-8">
 		<div class="flex gap-8">
 			<img src={image} alt="" class="block w-16 h-16" />
 			<div class="flex flex-col justify-center">
@@ -20,7 +20,7 @@
 				<a href="https://{website}" target="_blank" rel="noreferrer">{website}</a>
 			</div>
 		</div>
-		<div class="flex flex-row md:flex-col gap-4">
+		<div class="flex flex-row lg:flex-col gap-4">
 			<div class="flex justify-end">
 				<span class="badge variant-filled-primary">
 					{type}

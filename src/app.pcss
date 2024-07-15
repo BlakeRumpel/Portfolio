@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  /* noinspection CssUnknownTarget */
   src: url(/font/Quicksand-Regular.ttf);
 }
 
@@ -11,6 +12,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
+  /* noinspection CssUnknownTarget */
   src: url(/font/Quicksand-Bold.ttf);
 }
 
@@ -33,3 +35,31 @@ button { @apply btn variant-filled; }
 label { @apply label; }
 input { @apply input; }
 textarea { @apply textarea rounded-none; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient {
+  --size: 250px;
+  --speed: 50s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(rgb(var(--color-primary-500)), rgb(var(--color-secondary-500)));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@screen lg {
+  .gradient {
+    --size: 300px;
+  }
+}

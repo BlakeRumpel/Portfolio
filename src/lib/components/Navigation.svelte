@@ -55,7 +55,7 @@
 	{#each links as link}
 		<a
 			href={link.href}
-			class="flex items-center px-4 py-1 text-white no-underline hover:bg-primary-hover-token rounded-token"
+			class="flex items-center px-4 py-1 !text-surface-50 no-underline hover:bg-surface-50/10 rounded-token"
 			class:font-bold={current === link.href}
 			on:click|preventDefault={onClick}
 		>
