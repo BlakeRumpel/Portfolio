@@ -34,8 +34,8 @@
 		</span>
 	{/snippet}
 	{#snippet content()}
-		<span class="bg-surface-500 p-2 rounded-lg whitespace-nowrap">
+		<div class="card p-2">
 			{@html name}
-		</span>
+		</div>
 	{/snippet}
 </Tooltip>
