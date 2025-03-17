@@ -12,14 +12,14 @@
 	synopsis="An app to find new Just Chatting streamers on Twitch."
 	website="justchattingroulette.com"
 >
-	<svelte:fragment slot="languages">
+	{#snippet languages()}
 		<LanguageIcon name="Svelte">
 			<Svelte size="24" />
 		</LanguageIcon>
 		<LanguageIcon name="TypeScript">
 			<TypeScript size="20" />
 		</LanguageIcon>
-	</svelte:fragment>
+	{/snippet}
 
 	<div class="space-y-2">
 		<p>

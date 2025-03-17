@@ -51,7 +51,7 @@
 			</label>
 			<label for="message" class="col-span-2">
 				<span>Message</span>
-				<textarea id="message" rows="6" name="message" required />
+				<textarea id="message" rows="6" name="message" required></textarea>
 			</label>
 
 			<div>&nbsp;</div>

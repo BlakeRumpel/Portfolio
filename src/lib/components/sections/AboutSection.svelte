@@ -74,7 +74,7 @@
 
 						{#if language.component}
 							<span class="flex justify-center fill-surface-50 w-16 h-12">
-								<svelte:component this={language.component} />
+								<language.component />
 							</span>
 						{/if}
 

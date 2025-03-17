@@ -29,5 +29,5 @@
 		{numeral($modDownloads).format()}
 	</span>
 {:else}
-	<div class="inline-block placeholder animate-pulse w-24 align-middle" />
+	<div class="inline-block placeholder animate-pulse w-24 align-middle"></div>
 {/if}

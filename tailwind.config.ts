@@ -1,5 +1,5 @@
 import { join } from "path";
-import { type CustomThemeConfig, getThemeProperties, skeleton } from "@skeletonlabs/tw-plugin";
+import { type CustomThemeConfig, getThemeProperties } from "@skeletonlabs/tw-plugin";
 import type { Config } from "tailwindcss";
 
 const theme: CustomThemeConfig = {
@@ -34,11 +34,5 @@ export default {
 			}
 		}
 	},
-	plugins: [
-		require("@tailwindcss/forms"),
-		require("@tailwindcss/typography"),
-		skeleton({
-			themes: { custom: [theme] }
-		})
-	]
+	plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")]
 } satisfies Config;

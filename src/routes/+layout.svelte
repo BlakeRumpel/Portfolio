@@ -4,6 +4,11 @@
 	import { storePopup } from "@skeletonlabs/skeleton";
 	import Navigation from "$lib/components/Navigation.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
@@ -22,7 +27,7 @@
 <div class="container flex mx-auto">
 	<Navigation />
 	<main class="flex flex-col h-full relative md:ml-60 px-8">
-		<slot />
+		{@render children?.()}
 	</main>
 </div>
 

@@ -2,11 +2,17 @@
 	import { popup } from "@skeletonlabs/skeleton";
 	import Fa from "svelte-fa";
 	import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+	import type { Snippet } from "svelte";
 
-	export let icon: IconDefinition | undefined = undefined;
-	export let name: string;
+	interface Props {
+		icon?: IconDefinition | undefined;
+		name: string;
+		children?: Snippet;
+	}
 
-	const id = `language-popup-${Math.random().toString(16).slice(2)}`;
+	let { icon = undefined, name, children }: Props = $props();
+
+	const id = $props.id();
 </script>
 
 <span
@@ -16,7 +22,7 @@
 	{#if icon}
 		<Fa {icon} size="lg" />
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </span>
 <span class="bg-primary-500 p-2 rounded-lg whitespace-nowrap" data-popup={id}>
