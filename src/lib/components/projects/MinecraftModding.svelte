@@ -14,13 +14,13 @@
 	synopsis="Multiple popular mods for Minecraft: Java Edition."
 	website="blakesmods.com"
 >
-	<svelte:fragment slot="languages">
+	{#snippet languages()}
 		<LanguageIcon name="Java <br> (Mod Development)" icon={faJava} />
 		<LanguageIcon name="Vue <br> (Website)" icon={faVuejs} />
 		<LanguageIcon name="TypeScript <br> (Website)">
 			<TypeScript size="20" />
 		</LanguageIcon>
-	</svelte:fragment>
+	{/snippet}
 
 	<div class="space-y-2">
 		<p>

@@ -1,11 +1,13 @@
 <script lang="ts">
-	export let size: string = "48";
+	interface Props {
+		size?: string;
+	}
+
+	let { size = "48" }: Props = $props();
 </script>
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	version="1.1"
 	viewBox="0 0 24 24"
 	style="enable-background:new 0 0 24 24;"
 	xml:space="preserve"

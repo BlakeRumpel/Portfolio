@@ -9,9 +9,11 @@
 		{ name: "Contact", href: "#contact" }
 	];
 
-	let current = links[0].href;
+	let current = $state(links[0].href);
 
 	function onClick(event: MouseEvent) {
+		event.preventDefault();
+
 		const target = event.currentTarget as HTMLAnchorElement;
 		const href = target.getAttribute("href") as string;
 		const element = document.querySelector(href);
@@ -55,9 +57,9 @@
 	{#each links as link}
 		<a
 			href={link.href}
-			class="flex items-center px-4 py-1 !text-surface-50 no-underline hover:bg-surface-50/10 rounded-token"
+			class="flex items-center px-4 py-1 !text-surface-50 no-underline hover:bg-surface-50/10 rounded"
 			class:font-bold={current === link.href}
-			on:click|preventDefault={onClick}
+			onclick={onClick}
 		>
 			{link.name}
 		</a>

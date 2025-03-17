@@ -10,7 +10,7 @@
 				href="https://github.com/blakebr0"
 				target="_blank"
 				rel="noreferrer"
-				class="flex items-center px-2 py-1 gap-2 text-surface-900-50-token no-underline hover:bg-primary-hover-token rounded-token"
+				class="flex items-center px-2 py-1 gap-2 text-surface-950-50 no-underline hover:preset-tonal-primary rounded-base"
 			>
 				<Fa icon={faGithub} /> GitHub
 			</a>
@@ -18,11 +18,11 @@
 				href="https://www.linkedin.com/in/blake-rumpel/"
 				target="_blank"
 				rel="noreferrer"
-				class="flex items-center px-2 py-1 gap-2 text-surface-900-50-token no-underline hover:bg-primary-hover-token rounded-token"
+				class="flex items-center px-2 py-1 gap-2 text-surface-950-50 no-underline hover:preset-tonal-primary rounded-base"
 			>
 				<Fa icon={faLinkedin} /> Linkedin
 			</a>
 		</div>
-		<div class="text-sm">&copy; {new Date().getFullYear()} Blake Rumpel</div>
+		<div class="text-sm">© {new Date().getFullYear()} Blake Rumpel</div>
 	</div>
 </footer>

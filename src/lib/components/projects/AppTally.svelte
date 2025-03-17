@@ -12,14 +12,14 @@
 	synopsis="A web app to track and manage job applications."
 	website="apptally.io"
 >
-	<svelte:fragment slot="languages">
+	{#snippet languages()}
 		<LanguageIcon name="PHP" icon={faPhp} />
 		<LanguageIcon name="Laravel" icon={faLaravel} />
 		<LanguageIcon name="React" icon={faReact} />
 		<LanguageIcon name="TypeScript">
 			<TypeScript size="20" />
 		</LanguageIcon>
-	</svelte:fragment>
+	{/snippet}
 
 	<div class="space-y-2">
 		<p>

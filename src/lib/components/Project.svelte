@@ -1,14 +1,21 @@
 <script lang="ts">
 	import Fa from "svelte-fa";
 	import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+	import type { Snippet } from "svelte";
 
-	export let name: string;
-	export let image: string;
-	export let type: string;
-	export let website: string;
-	export let synopsis: string;
+	interface Props {
+		name: string;
+		image: string;
+		type: string;
+		website: string;
+		synopsis: string;
+		languages?: Snippet;
+		children?: Snippet;
+	}
 
-	let showDescription = false;
+	let { name, image, type, website, synopsis, languages, children }: Props = $props();
+
+	let showDescription = $state(false);
 </script>
 
 <div class="flex flex-col gap-y-4">
@@ -22,12 +29,12 @@
 		</div>
 		<div class="flex flex-row lg:flex-col gap-4">
 			<div class="flex justify-end">
-				<span class="badge variant-filled-primary">
+				<span class="badge preset-filled-primary-500">
 					{type}
 				</span>
 			</div>
 			<div class="flex justify-end items-center gap-2">
-				<slot name="languages" />
+				{@render languages?.()}
 			</div>
 		</div>
 	</div>
@@ -38,14 +45,15 @@
 
 	<div>
 		<button
-			class="btn btn-sm variant-soft-primary"
-			on:click={() => (showDescription = !showDescription)}
+			type="button"
+			class="btn btn-sm preset-tonal-primary"
+			onclick={() => (showDescription = !showDescription)}
 		>
 			Learn More <Fa class="ml-3" icon={showDescription ? faChevronUp : faChevronDown} />
 		</button>
 	</div>
 
 	{#if showDescription}
-		<slot />
+		{@render children?.()}
 	{/if}
 </div>

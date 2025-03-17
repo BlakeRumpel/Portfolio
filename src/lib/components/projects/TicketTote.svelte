@@ -13,7 +13,7 @@
 	synopsis="A complete event and ticket management platform."
 	website="tickettote.com"
 >
-	<svelte:fragment slot="languages">
+	{#snippet languages()}
 		<LanguageIcon name="JavaScript" icon={faJs} />
 		<LanguageIcon name="VueJS" icon={faVuejs} />
 		<LanguageIcon name="PHP" icon={faPhp} />
@@ -21,7 +21,7 @@
 		<LanguageIcon name="TypeScript">
 			<TypeScript size="20" />
 		</LanguageIcon>
-	</svelte:fragment>
+	{/snippet}
 
 	<div class="space-y-2">
 		<p>
