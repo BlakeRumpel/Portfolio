@@ -1,3 +1,11 @@
+@import "tailwindcss";
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton/optional/presets";
+@import "@skeletonlabs/skeleton/themes/nouveau";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
@@ -16,7 +24,26 @@
   src: url(/font/Quicksand-Bold.ttf);
 }
 
-@import "tailwindcss";
+@source "../node_modules/@skeletonlabs/skeleton-svelte/dist";
+
+[data-theme="nouveau"] {
+  --base-font-family: "Quicksand", "sans-serif";
+  --anchor-font-family: var(--base-font-family);
+  --heading-font-family: var(--base-font-family);
+
+  --color-surface-50: #dddddd;
+  --color-surface-100: #d2d2d2;
+  --color-surface-200: #c6c6c6;
+  --color-surface-300: #a4a4a4;
+  --color-surface-400: #606060;
+  --color-surface-500: #1c1c1c;
+  --color-surface-600: #191919;
+  --color-surface-700: #151515;
+  --color-surface-800: #111111;
+  --color-surface-900: #0a0a0a;
+
+  --body-background-color-dark: var(--color-surface-900);
+}
 
 html, body { @apply h-full; }
 
@@ -26,13 +53,11 @@ h3 { @apply h3 font-bold; }
 h4 { @apply h4 font-bold; }
 h5 { @apply h5 font-bold; }
 
-a { @apply anchor; }
-
-button { @apply btn variant-filled; }
+hr { @apply hr border-surface-500; }
 
 label { @apply label; }
-input { @apply input; }
-textarea { @apply textarea rounded-none; }
+input { @apply input bg-surface-300-700 border border-surface-500; }
+textarea { @apply textarea bg-surface-300-700 border border-surface-500; }
 
 @keyframes rotate {
   0% {
@@ -43,6 +68,10 @@ textarea { @apply textarea rounded-none; }
   }
 }
 
+.card {
+    @apply preset-filled-surface-200-800 border-[1px] border-surface-300-700;
+}
+
 .gradient {
   --size: 250px;
   --speed: 50s;
@@ -51,13 +80,7 @@ textarea { @apply textarea rounded-none; }
   width: var(--size);
   height: var(--size);
   filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(rgb(var(--color-primary-500)), rgb(var(--color-secondary-500)));
+  background-image: linear-gradient(var(--color-primary-500), var(--color-secondary-500));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-@screen lg {
-  .gradient {
-    --size: 300px;
-  }
 }

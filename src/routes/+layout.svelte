@@ -1,16 +1,14 @@
 <script lang="ts">
-	import "../app.pcss";
-	import { computePosition, autoUpdate, offset, shift, flip, arrow } from "@floating-ui/dom";
-	import { storePopup } from "@skeletonlabs/skeleton";
+	import "../app.css";
 	import Navigation from "$lib/components/Navigation.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+	import type { Snippet } from "svelte";
+
 	interface Props {
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let { children }: Props = $props();
-
-	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
 
 <svelte:head>

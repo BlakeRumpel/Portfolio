@@ -29,7 +29,7 @@
 		</div>
 		<div class="flex flex-row lg:flex-col gap-4">
 			<div class="flex justify-end">
-				<span class="badge variant-filled-primary">
+				<span class="badge preset-filled-primary-500">
 					{type}
 				</span>
 			</div>
@@ -45,7 +45,8 @@
 
 	<div>
 		<button
-			class="btn btn-sm variant-soft-primary"
+			type="button"
+			class="btn btn-sm preset-tonal-primary"
 			onclick={() => (showDescription = !showDescription)}
 		>
 			Learn More <Fa class="ml-3" icon={showDescription ? faChevronUp : faChevronDown} />

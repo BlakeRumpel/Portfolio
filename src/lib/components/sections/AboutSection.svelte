@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar } from "@skeletonlabs/skeleton";
+	import { Avatar } from "@skeletonlabs/skeleton-svelte";
 	import {
 		faCss3,
 		faGolang,
@@ -37,16 +37,12 @@
 	];
 </script>
 
-<svelte:head>
-	<title>About Me &bull; Blake Rumpel</title>
-</svelte:head>
-
 <section id="about" class="flex flex-col my-16 gap-16 scroll-m-16">
 	<h1 class="text-center gradient-header">About Me</h1>
 
 	<div class="flex flex-wrap lg:flex-nowrap gap-8">
 		<div class="flex flex-col w-full lg:w-1/2 gap-8">
-			<Avatar src="/img/profile.jpg" rounded="rounded-xl" width="w-48" />
+			<Avatar src="/img/profile.jpg" name="Blake" rounded="rounded-xl" size="w-48" />
 			<div class="flex flex-col gap-4">
 				<p>
 					Hi, I'm Blake! I'm a {dayjs().diff(birthday, "years")} year old software engineer from Canada.
